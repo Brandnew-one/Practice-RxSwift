@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		650E8A6C28796C0D0073AACB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E8A6B28796C0D0073AACB /* MainViewController.swift */; };
+		650E8A6F28796D210073AACB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E8A6E28796D210073AACB /* MainView.swift */; };
 		65A51108287969480010CB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A51107287969480010CB79 /* AppDelegate.swift */; };
 		65A5110A287969480010CB79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A51109287969480010CB79 /* SceneDelegate.swift */; };
 		65A51111287969480010CB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A51110287969480010CB79 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		19C041E442F02E327D9BEB55 /* Pods_RxSwiftEx_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftEx_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B1134690368DA60813D902 /* Pods-RxSwiftEx-1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftEx-1.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftEx-1/Pods-RxSwiftEx-1.release.xcconfig"; sourceTree = "<group>"; };
 		650E8A6B28796C0D0073AACB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		650E8A6E28796D210073AACB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		65A51104287969480010CB79 /* RxSwiftEx-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwiftEx-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A51107287969480010CB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65A51109287969480010CB79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		650E8A6D28796CD50073AACB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65A51110287969480010CB79 /* Assets.xcassets */,
+				65A51112287969480010CB79 /* LaunchScreen.storyboard */,
+				65A51109287969480010CB79 /* SceneDelegate.swift */,
+				65A51107287969480010CB79 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		65A510FB287969480010CB79 = {
 			isa = PBXGroup;
 			children = (
@@ -114,11 +127,9 @@
 		65A51106287969480010CB79 /* RxSwiftEx-1 */ = {
 			isa = PBXGroup;
 			children = (
-				65A51107287969480010CB79 /* AppDelegate.swift */,
-				65A51109287969480010CB79 /* SceneDelegate.swift */,
+				650E8A6D28796CD50073AACB /* Supporting Files */,
+				650E8A6E28796D210073AACB /* MainView.swift */,
 				650E8A6B28796C0D0073AACB /* MainViewController.swift */,
-				65A51110287969480010CB79 /* Assets.xcassets */,
-				65A51112287969480010CB79 /* LaunchScreen.storyboard */,
 				65A51115287969480010CB79 /* Info.plist */,
 			);
 			path = "RxSwiftEx-1";
@@ -403,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				650E8A6C28796C0D0073AACB /* MainViewController.swift in Sources */,
+				650E8A6F28796D210073AACB /* MainView.swift in Sources */,
 				65A51108287969480010CB79 /* AppDelegate.swift in Sources */,
 				65A5110A287969480010CB79 /* SceneDelegate.swift in Sources */,
 			);
