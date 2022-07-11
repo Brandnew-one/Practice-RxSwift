@@ -18,6 +18,10 @@ class GithubViewController: UIViewController {
     super.viewDidLoad()
     setupView()
     setupConstraints()
+    NetworkManager.shared.requestRepository("Apple")
+      .subscribe {
+        print($0)
+      }
   }
 
   func setupView() {
