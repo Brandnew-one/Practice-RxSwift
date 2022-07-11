@@ -18,8 +18,10 @@
 
 /* Begin PBXFileReference section */
 		5780967E2D61AB33C89ACF01 /* Pods-HelloRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-HelloRxSwift/Pods-HelloRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		65330436287BF0D9007A67AB /* TransformingOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		659E896D287AE743004941C2 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		659E896E287AFCE0004941C2 /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		659E896F287B2E43004941C2 /* FilteringOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FilteringOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		659EC4E5286DDBC20091EC13 /* HelloRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		659EC4E8286DDBC20091EC13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		659EC4EA286DDBC20091EC13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,8 @@
 				65B9D523287AAED100386FBF /* Observable.playground */,
 				659E896D287AE743004941C2 /* Traits.playground */,
 				659E896E287AFCE0004941C2 /* Subject.playground */,
+				659E896F287B2E43004941C2 /* FilteringOperators.playground */,
+				65330436287BF0D9007A67AB /* TransformingOperator.playground */,
 			);
 			path = HelloRxSwift;
 			sourceTree = "<group>";
