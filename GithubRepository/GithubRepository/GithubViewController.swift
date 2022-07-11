@@ -12,7 +12,23 @@ import RxSwift
 import SnapKit
 
 class GithubViewController: UIViewController {
+  let githubView = GithubView()
+
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupView()
+    setupConstraints()
   }
+
+  func setupView() {
+    view.backgroundColor = .white
+    view.addSubview(githubView)
+  }
+
+  func setupConstraints() {
+    githubView.snp.makeConstraints {
+      $0.edges.equalTo(view.safeAreaLayoutGuide)
+    }
+  }
+
 }
