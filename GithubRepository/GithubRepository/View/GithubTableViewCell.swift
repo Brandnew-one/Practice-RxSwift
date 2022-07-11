@@ -21,6 +21,7 @@ class GithubTableViewCell: UITableViewCell {
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     setupView()
+    setupLabel()
     setupConstraints()
   }
 
@@ -28,8 +29,11 @@ class GithubTableViewCell: UITableViewCell {
     fatalError("GithubCell Error")
   }
 
-  func configureCell() {
-    print("configure")
+  func configureCell(_ item: Github) {
+    titleLabel.text = item.name
+    descriptionLabel.text = item.description
+    startCountLabel.text = "\(item.stargazersCount)"
+    languageLabel.text = item.language
   }
 
   private func setupView() {
@@ -39,6 +43,20 @@ class GithubTableViewCell: UITableViewCell {
     ].forEach {
       contentView.addSubview($0)
     }
+    starImageView.image = UIImage(systemName: "star.fill")
+    starImageView.tintColor = .yellow
+  }
+
+  private func setupLabel() {
+    titleLabel.font = .systemFont(ofSize: 18, weight: .heavy)
+    descriptionLabel.font = .systemFont(ofSize: 14, weight: .bold)
+    startCountLabel.font = .systemFont(ofSize: 14, weight: .bold)
+    languageLabel.font = .systemFont(ofSize: 14, weight: .bold)
+
+    titleLabel.textColor = .black
+    descriptionLabel.textColor = .black
+    startCountLabel.textColor = .gray
+    languageLabel.textColor = .gray
   }
 
   private func setupConstraints() {

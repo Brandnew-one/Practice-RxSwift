@@ -10,6 +10,8 @@
 		65584565287C21CB00A5A56E /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65584564287C21CB00A5A56E /* GithubViewController.swift */; };
 		65584567287C22A400A5A56E /* GithubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65584566287C22A400A5A56E /* GithubTableViewCell.swift */; };
 		658E9251287C7AAD00BE36F1 /* GithubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E9250287C7AAD00BE36F1 /* GithubView.swift */; };
+		658E9254287C85E700BE36F1 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E9253287C85E700BE36F1 /* Github.swift */; };
+		658E9258287C8FAB00BE36F1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E9257287C8FAB00BE36F1 /* NetworkManager.swift */; };
 		65F7071F287C2066001F9025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F7071E287C2066001F9025 /* AppDelegate.swift */; };
 		65F70721287C2066001F9025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F70720287C2066001F9025 /* SceneDelegate.swift */; };
 		65F70728287C2067001F9025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F70727287C2067001F9025 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		65584564287C21CB00A5A56E /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		65584566287C22A400A5A56E /* GithubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTableViewCell.swift; sourceTree = "<group>"; };
 		658E9250287C7AAD00BE36F1 /* GithubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubView.swift; sourceTree = "<group>"; };
+		658E9253287C85E700BE36F1 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
+		658E9257287C8FAB00BE36F1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		65F7071B287C2066001F9025 /* GithubRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F7071E287C2066001F9025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65F70720287C2066001F9025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,24 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		658E9255287C8F6B00BE36F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				658E9250287C7AAD00BE36F1 /* GithubView.swift */,
+				65584566287C22A400A5A56E /* GithubTableViewCell.swift */,
+				65584564287C21CB00A5A56E /* GithubViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		658E9256287C8F7E00BE36F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				658E9253287C85E700BE36F1 /* Github.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		65F70712287C2066001F9025 = {
 			isa = PBXGroup;
 			children = (
@@ -85,9 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				658E9252287C838400BE36F1 /* Supporting Files */,
-				65584564287C21CB00A5A56E /* GithubViewController.swift */,
-				658E9250287C7AAD00BE36F1 /* GithubView.swift */,
-				65584566287C22A400A5A56E /* GithubTableViewCell.swift */,
+				658E9257287C8FAB00BE36F1 /* NetworkManager.swift */,
+				658E9256287C8F7E00BE36F1 /* Model */,
+				658E9255287C8F6B00BE36F1 /* View */,
 				65F7072C287C2067001F9025 /* Info.plist */,
 			);
 			path = GithubRepository;
@@ -216,8 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658E9254287C85E700BE36F1 /* Github.swift in Sources */,
 				658E9251287C7AAD00BE36F1 /* GithubView.swift in Sources */,
 				65584565287C21CB00A5A56E /* GithubViewController.swift in Sources */,
+				658E9258287C8FAB00BE36F1 /* NetworkManager.swift in Sources */,
 				65F7071F287C2066001F9025 /* AppDelegate.swift in Sources */,
 				65584567287C22A400A5A56E /* GithubTableViewCell.swift in Sources */,
 				65F70721287C2066001F9025 /* SceneDelegate.swift in Sources */,
