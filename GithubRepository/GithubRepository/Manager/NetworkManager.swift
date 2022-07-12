@@ -23,7 +23,7 @@ class NetworkManager {
     return Observable.just(urlStr)
       .map { URL(string: $0)! }
       .map { URLRequest(url: $0) }
-      .flatMap { URLSession.shared.rx.data(request: $0) }
+      .flatMap { URLSession.shared.rx.data(request: $0) } // MARK: - Error가 발생하는 경우, thorw로 되어있는데 어디서 에러 핸들링을 해줘야 하는가?
       .map { data -> Result<[Github], Error> in
         guard
           let githubData = try? JSONDecoder().decode([Github].self, from: data)

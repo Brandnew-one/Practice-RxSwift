@@ -62,5 +62,20 @@ class GithubViewController: UIViewController {
         return cell
       }
       .disposed(by: disposeBag)
+      
+    githubViewModel.errorList
+      .observe(on: MainScheduler.instance) // UI 관련 로직이므로 Main-Thread에서!
+      .subscribe(onNext: { [weak self] error in
+        let alert = UIAlertController(
+          title: "Can't Find Organization",
+          message: error.localizedDescription,
+          preferredStyle: .alert
+        )
+        let action = UIAlertAction(title: "Close", style: .default)
+        alert.addAction(action)
+        self?.present(alert, animated: true)
+      })
+      .disposed(by: disposeBag)
+
   }
 }
