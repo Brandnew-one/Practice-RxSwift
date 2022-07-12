@@ -17,15 +17,12 @@ class GithubViewController: UIViewController {
   let githubView = GithubView()
   let githubViewModel = GithubViewModel()
 
-  let orginization: String = "Apple" // TODO: - TextField 값으로 변경 예정
-
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
     setupConstraints()
     setupTableView()
     bind()
-    githubViewModel.fetchGithub(orginization)
   }
 
   func setupView() {
@@ -45,6 +42,13 @@ class GithubViewController: UIViewController {
   }
 
   func bind() {
+    githubView.textField.rx.controlEvent([.editingDidEndOnExit])
+      .subscribe(onNext: { [weak self] in
+        guard let text = self?.githubView.textField.text else { return }
+        self?.githubViewModel.fetchGithub(text)
+      })
+      .disposed(by: disposeBag)
+
     githubViewModel.githubList
       .bind(to: githubView.tableView.rx.items) { tableView, row, element in
         guard

@@ -66,6 +66,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		656D5CAA287D4CA400938D7A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				658E9257287C8FAB00BE36F1 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		658E9252287C838400BE36F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				658E9252287C838400BE36F1 /* Supporting Files */,
-				658E9257287C8FAB00BE36F1 /* NetworkManager.swift */,
+				656D5CAA287D4CA400938D7A /* Manager */,
 				658E9256287C8F7E00BE36F1 /* Model */,
 				658E9255287C8F6B00BE36F1 /* View */,
 				656D5CA7287D309D00938D7A /* ViewModel */,
