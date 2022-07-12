@@ -24,14 +24,12 @@ class NetworkManager {
       .map { URL(string: $0)! }
       .map { URLRequest(url: $0) }
       .flatMap { URLSession.shared.rx.data(request: $0) }
-
       .map { data -> Result<[Github], Error> in
         guard
           let githubData = try? JSONDecoder().decode([Github].self, from: data)
         else {
           return .failure(NetworkError.default)
         }
-        print(githubData)
         return .success(githubData)
       }
       .asSingle()

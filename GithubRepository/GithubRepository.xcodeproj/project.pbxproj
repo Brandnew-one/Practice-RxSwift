@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		65584565287C21CB00A5A56E /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65584564287C21CB00A5A56E /* GithubViewController.swift */; };
 		65584567287C22A400A5A56E /* GithubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65584566287C22A400A5A56E /* GithubTableViewCell.swift */; };
+		656D5CA9287D30B400938D7A /* GithubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D5CA8287D30B400938D7A /* GithubViewModel.swift */; };
 		658E9251287C7AAD00BE36F1 /* GithubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E9250287C7AAD00BE36F1 /* GithubView.swift */; };
 		658E9254287C85E700BE36F1 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E9253287C85E700BE36F1 /* Github.swift */; };
 		658E9258287C8FAB00BE36F1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E9257287C8FAB00BE36F1 /* NetworkManager.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		65584564287C21CB00A5A56E /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		65584566287C22A400A5A56E /* GithubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTableViewCell.swift; sourceTree = "<group>"; };
+		656D5CA8287D30B400938D7A /* GithubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewModel.swift; sourceTree = "<group>"; };
 		658E9250287C7AAD00BE36F1 /* GithubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubView.swift; sourceTree = "<group>"; };
 		658E9253287C85E700BE36F1 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		658E9257287C8FAB00BE36F1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 				DDE843DB0E81958F1EA636CB /* Pods_GithubRepository.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		656D5CA7287D309D00938D7A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				656D5CA8287D30B400938D7A /* GithubViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		658E9252287C838400BE36F1 /* Supporting Files */ = {
@@ -110,6 +120,7 @@
 				658E9257287C8FAB00BE36F1 /* NetworkManager.swift */,
 				658E9256287C8F7E00BE36F1 /* Model */,
 				658E9255287C8F6B00BE36F1 /* View */,
+				656D5CA7287D309D00938D7A /* ViewModel */,
 				65F7072C287C2067001F9025 /* Info.plist */,
 			);
 			path = GithubRepository;
@@ -245,6 +256,7 @@
 				65F7071F287C2066001F9025 /* AppDelegate.swift in Sources */,
 				65584567287C22A400A5A56E /* GithubTableViewCell.swift in Sources */,
 				65F70721287C2066001F9025 /* SceneDelegate.swift in Sources */,
+				656D5CA9287D30B400938D7A /* GithubViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

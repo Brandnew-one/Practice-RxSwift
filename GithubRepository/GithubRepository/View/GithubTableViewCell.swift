@@ -57,6 +57,8 @@ class GithubTableViewCell: UITableViewCell {
     descriptionLabel.textColor = .black
     startCountLabel.textColor = .gray
     languageLabel.textColor = .gray
+
+    descriptionLabel.numberOfLines = 0
   }
 
   private func setupConstraints() {
@@ -73,7 +75,7 @@ class GithubTableViewCell: UITableViewCell {
 
     languageLabel.snp.makeConstraints {
       $0.leading.equalTo(startCountLabel.snp.trailing).offset(8)
-      $0.trailing.greaterThanOrEqualToSuperview().offset(-8) // MARK: -
+      $0.trailing.lessThanOrEqualToSuperview().offset(-8) // MARK: -
       $0.bottom.equalTo(starImageView.snp.bottom)
     }
 
