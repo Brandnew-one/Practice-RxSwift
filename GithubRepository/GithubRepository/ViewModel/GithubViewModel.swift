@@ -12,17 +12,23 @@ import RxSwift
 class GithubViewModel {
   private var disposeBag = DisposeBag()
   let githubList = BehaviorSubject<[Github]>(value: [])
+  let errorList = PublishSubject<Error>()
 
   func fetchGithub(_ organization: String) {
     NetworkManager.shared.requestRepository(organization)
-      .subscribe(onSuccess: { result in
-        switch result {
-        case .success(let data):
-          self.githubList.onNext(data)
-        case .failure(let error):
-          print(error)
+      .subscribe(
+        onSuccess: { [weak self] result in
+          switch result {
+          case .success(let data):
+            self?.githubList.onNext(data)
+          case .failure(let error):
+            print(error)
+          }
+        },
+        onFailure: { [weak self] error in
+          self?.errorList.onNext(error)
         }
-      })
+      )
       .disposed(by: disposeBag)
   }
 }
