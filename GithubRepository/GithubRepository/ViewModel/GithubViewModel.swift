@@ -12,6 +12,7 @@ import RxSwift
 class GithubViewModel {
   private var disposeBag = DisposeBag()
   let githubList = BehaviorSubject<[Github]>(value: [])
+
   let errorList = PublishSubject<Error>()
 
   func fetchGithub(_ organization: String) {
