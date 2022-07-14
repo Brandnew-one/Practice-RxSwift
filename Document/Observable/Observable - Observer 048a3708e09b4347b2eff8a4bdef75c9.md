@@ -1,4 +1,4 @@
-# Observable - Observer
+# Observable
 
 ### **Every `Observable` sequence is just a sequence.**
 
@@ -23,6 +23,8 @@ protocol ObserverType {
 ```
 
 Observable은 위와 같이 세 가지 유형의 이벤트만 방출하는데 error나 completed 이벤트가 방출되면 Observable의 시퀀스가 종료된다. (생명주기 끝)
+
+`예제 코드에 dispose가 없어서 불편하신가요? Observer정리에서 dispose에 대해 정리하면서 추가되오니 참아주세요`
 
 ---
 
