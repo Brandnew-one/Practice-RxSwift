@@ -30,7 +30,7 @@ Observable은 위와 같이 세 가지 유형의 이벤트만 방출하는데 er
 
 ### 1) just
 
-![스크린샷 2022-07-13 오후 11.46.37.png](Observable%20-%20Observer%20048a3708e09b4347b2eff8a4bdef75c9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-07-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.46.37.png)
+<img width="458" alt="스크린샷_2022-07-13_오후_11 46 37" src="https://user-images.githubusercontent.com/88618825/178919698-576eaa81-7be9-4bf7-acf4-ce9670e9739a.png">
 
 하나의 요소를 포함하는 시퀀스 생성
 
@@ -46,7 +46,7 @@ Observable<Int>.just(1)
 
 ### 2) of
 
-![스크린샷 2022-07-13 오후 11.45.10.png](Observable%20-%20Observer%20048a3708e09b4347b2eff8a4bdef75c9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-07-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.45.10.png)
+<img width="457" alt="스크린샷_2022-07-13_오후_11 45 10" src="https://user-images.githubusercontent.com/88618825/178919804-7a9be839-d96e-4a7c-a52a-4b5e3b7896c7.png">
 
 element = 가변 파라미터, 타입 추론을 통해 시퀀스 생성 → Array타입 하나만 넣으면 하나만 방출
 
@@ -72,7 +72,7 @@ Observable<[Int]>.of([1, 2, 3, 4, 5])
 
 ### 3) from
 
-![스크린샷 2022-07-14 오전 12.51.59.png](Observable%20-%20Observer%20048a3708e09b4347b2eff8a4bdef75c9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-07-14_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_12.51.59.png)
+<img width="460" alt="스크린샷_2022-07-14_오전_12 51 59" src="https://user-images.githubusercontent.com/88618825/178919869-8a1ed221-a95c-4282-9ad0-74182ef848e4.png">
 
 Array 타입을 받아서 각 요소를 방출하는 시퀀스 생성
 
@@ -91,7 +91,7 @@ Observable<Int>.from([1, 2, 3, 4, 5])
 
 ### 4) create
 
-![스크린샷 2022-07-14 오전 1.15.27.png](Observable%20-%20Observer%20048a3708e09b4347b2eff8a4bdef75c9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-07-14_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_1.15.27.png)
+<img width="459" alt="스크린샷_2022-07-14_오전_1 15 27" src="https://user-images.githubusercontent.com/88618825/178919948-49504c67-27bf-4faa-9a6b-1d8a0557a329.png">
 
 Observable 시퀀스를 직접 생성~~(근본)~~
 
@@ -122,7 +122,7 @@ next, completed, error 이벤트를 이용해 직접 시퀀스를 생성해 낼 
 
 ### 5) empty
 
-![스크린샷 2022-07-14 오후 3.08.17.png](Observable%20-%20Observer%20048a3708e09b4347b2eff8a4bdef75c9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-07-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.08.17.png)
+<img width="477" alt="스크린샷_2022-07-14_오후_3 08 17" src="https://user-images.githubusercontent.com/88618825/178919999-70e2266c-9090-416e-a430-3be8fc832b0c.png">
 
 아무런 이벤트도 방출하지 않는 Observable을 생성한다
 
@@ -138,7 +138,7 @@ Observable<Void>.empty()
 
 ### 6) never
 
-![스크린샷 2022-07-14 오후 3.11.06.png](Observable%20-%20Observer%20048a3708e09b4347b2eff8a4bdef75c9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-07-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.11.06.png)
+<img width="459" alt="스크린샷_2022-07-14_오후_3 11 06" src="https://user-images.githubusercontent.com/88618825/178920084-2ba75e3d-88e4-4433-816d-7b92e9077370.png">
 
 empty와 유사해 보이지만 empty로 생성된 Observable의 경우 complete 이벤트는 방출되어 Observable의 생명주기가 끝나지만 never는 complete 이벤트도 방출하지 않아 시퀀스가 종료되지 않는다.
 
@@ -154,7 +154,7 @@ Observable<Void>.never()
 
 ### 7) range
 
-![스크린샷 2022-07-14 오후 3.13.51.png](Observable%20-%20Observer%20048a3708e09b4347b2eff8a4bdef75c9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-07-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.13.51.png)
+<img width="438" alt="스크린샷_2022-07-14_오후_3 13 51" src="https://user-images.githubusercontent.com/88618825/178920157-e80a5527-d15a-42c3-b24a-0d7d859a3004.png">
 
 연속적인 정수의 범위를 방출하는 Observable 생성
 
