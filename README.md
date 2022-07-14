@@ -6,6 +6,7 @@ RxSwift를 공부한 내용들을 정리하기 위한 레포입니다.
 
 * [Observable 에 대해여](https://github.com/Brandnew-one/Practice-RxSwift/blob/main/Document/Observable/Observable%20-%20Observer%20048a3708e09b4347b2eff8a4bdef75c9.md)
 * [Observer에 대하여](https://github.com/Brandnew-one/Practice-RxSwift/blob/main/Document/Observer/Observer%20d5263ac7fe8544518fa453048646d5f0.md)
+* [Traits에 대하여](https://github.com/Brandnew-one/Practice-RxSwift/blob/main/Document/Traits/Traits%2002a35a0420b043d0a21fcf69da1a123b.md)
 
 
 
