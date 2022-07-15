@@ -8,6 +8,7 @@ RxSwift를 공부한 내용들을 정리하기 위한 레포입니다.
 * [Observer에 대하여](https://github.com/Brandnew-one/Practice-RxSwift/blob/main/Document/Observer/Observer%20d5263ac7fe8544518fa453048646d5f0.md)
 * [Traits에 대하여](https://github.com/Brandnew-one/Practice-RxSwift/blob/main/Document/Traits/Traits%2002a35a0420b043d0a21fcf69da1a123b.md)
 * [Subject에 대하여](https://github.com/Brandnew-one/Practice-RxSwift/blob/main/Document/Subject/Subject%200e862e210b944e4b9749d08ed53f7615.md)
+* [Filtering Operator에 대하여](https://github.com/Brandnew-one/Practice-RxSwift/blob/main/Document/Filtering%20Operating/Filtering%20Operator%208d2b6b28d1ad4a5a8f7a827a9300c6fd.md)
 
 
 
