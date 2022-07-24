@@ -13,6 +13,13 @@ import SnapKit
 
 class GithubViewController: UIViewController {
   private var disposeBag = DisposeBag()
+  private lazy var input = GithubViewModel.Input(
+    textFieldTapAction: githubView.textField.rx.controlEvent([.editingDidEndOnExit])
+      .withLatestFrom(githubView.textField.rx.text) { $1 ?? "" }
+      .filter { !$0.isEmpty }
+      .distinctUntilChanged()
+  )
+  private lazy var output = githubViewModel.transform(input: input)
 
   let githubView = GithubView()
   let githubViewModel = GithubViewModel()
@@ -42,15 +49,8 @@ class GithubViewController: UIViewController {
   }
 
   func bind() {
-    githubView.textField.rx.controlEvent([.editingDidEndOnExit])
-      .subscribe(onNext: { [weak self] in
-        guard let text = self?.githubView.textField.text else { return }
-        self?.githubViewModel.fetchGithub(text)
-      })
-      .disposed(by: disposeBag)
-
-    githubViewModel.githubList
-      .bind(to: githubView.tableView.rx.items) { tableView, row, element in
+    output.organizationValue
+      .drive(githubView.tableView.rx.items) { tableView, row, element in
         guard
           let cell = tableView.dequeueReusableCell(
             withIdentifier: GithubTableViewCell.identifier
@@ -62,10 +62,9 @@ class GithubViewController: UIViewController {
         return cell
       }
       .disposed(by: disposeBag)
-      
-    githubViewModel.errorList
-      .observe(on: MainScheduler.instance) // UI 관련 로직이므로 Main-Thread에서!
-      .subscribe(onNext: { [weak self] error in
+
+    output.errorValue
+      .drive(onNext: { [weak self] error in
         let alert = UIAlertController(
           title: "Can't Find Organization",
           message: error.localizedDescription,
