@@ -14,8 +14,8 @@ import SnapKit
 class GithubViewController: UIViewController {
   private var disposeBag = DisposeBag()
   private lazy var input = GithubViewModel.Input(
-    textFieldTapAction: githubView.textField.rx.controlEvent([.editingDidEndOnExit])
-      .withLatestFrom(githubView.textField.rx.text) { $1 ?? "" }
+    textFieldTapAction: githubView.textField.rx.controlEvent(.editingDidEndOnExit)
+      .withLatestFrom(githubView.textField.rx.text.orEmpty)
       .filter { !$0.isEmpty }
       .distinctUntilChanged()
   )
@@ -50,31 +50,14 @@ class GithubViewController: UIViewController {
 
   func bind() {
     output.organizationValue
-      .drive(githubView.tableView.rx.items) { tableView, row, element in
-        guard
-          let cell = tableView.dequeueReusableCell(
-            withIdentifier: GithubTableViewCell.identifier
-          ) as? GithubTableViewCell
-        else {
-          return UITableViewCell()
-        }
-        cell.configureCell(element)
-        return cell
+      .drive(
+        githubView.tableView.rx.items(
+          cellIdentifier: GithubTableViewCell.identifier,
+          cellType: GithubTableViewCell.self
+        )
+      ) { row, item, cell in
+        cell.configureCell(item)
       }
       .disposed(by: disposeBag)
-
-    output.errorValue
-      .drive(onNext: { [weak self] error in
-        let alert = UIAlertController(
-          title: "Can't Find Organization",
-          message: error.localizedDescription,
-          preferredStyle: .alert
-        )
-        let action = UIAlertAction(title: "Close", style: .default)
-        alert.addAction(action)
-        self?.present(alert, animated: true)
-      })
-      .disposed(by: disposeBag)
-
   }
 }
