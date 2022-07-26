@@ -18,3 +18,4 @@ RxSwift를 공부한 내용들을 정리하기 위한 레포입니다.
 ## 트러블슈팅
 
 * [Observable의 생명주기](https://github.com/Brandnew-one/Practice-RxSwift/blob/main/Document/TroubleShooting/%F0%9F%A4%A6%20%E1%84%90%E1%85%B3%E1%84%85%E1%85%A5%E1%84%87%E1%85%B3%E1%86%AF%E1%84%89%E1%85%B2%E1%84%90%E1%85%B5%E1%86%BC%2042b3658a270448298f0d52929035aa7c.md)
+* [Merge 뭐지?](https://github.com/Brandnew-one/Practice-RxSwift/blob/main/Document/TroubleShooting/%F0%9F%A4%A6%E1%84%90%E1%85%B3%E1%84%85%E1%85%A5%E1%84%87%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%B2%E1%84%90%E1%85%B5%E1%86%BC%20-%2002%209ef0ff6195f64396aee2a951f4896948.md)
